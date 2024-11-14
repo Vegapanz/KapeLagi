@@ -10,7 +10,7 @@
   <br />About : Directs to About page.
   <br />Contact : Directs to Contact page.
   <br />KapeLagi Logo : Directs to Homepage when clicked.
-  <br /><span style="color: #933333"> Paragraphs</span> : Information of the business and catchy phrase.
+  <br /><span style="color: red"> Paragraphs</span> : Information of the business and catchy phrase.
   
 ![Web Product Page](/Design/Product.png)
 ![Web About Page](/Design/About.png)
