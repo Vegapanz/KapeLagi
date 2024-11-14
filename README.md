@@ -16,7 +16,6 @@
 ![Web Product Page](/Design/Product.png)
 # Description:
   Showcase of the products and their prices.
-# Content:
   # Content:
   **Home Button :** Directs to Homepage.
   <br />**Product Button :** Shows a menu when hovered.
