@@ -28,6 +28,6 @@
 # Description:
   Showcase of the member of the company.
 # Contact Page
-![Web Contact Page](/Design/Contact.png)
+![Web Contact Page](/Design/Contact 2.png)
 # Description:
   Ways to contact and the socials of the company.
