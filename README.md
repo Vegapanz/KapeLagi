@@ -10,9 +10,20 @@
   <br />About : Directs to About page.
   <br />Contact : Directs to Contact page.
   <br />KapeLagi Logo : Directs to Homepage when clicked.
-  <br /><span style="color: red;"> Paragraphs</span> : Information of the business and catchy phrase.
-  
+  <br />Paragraphs : Information of the business and catchy phrase.
+
+# Product Page
 ![Web Product Page](/Design/Product.png)
+# Description:
+  Showcase of the products and their prices.
+# Content:
+  # Content:
+  Home Button : Directs to Homepage.
+  <br />Product Button : Shows a menu when hovered.
+  <br />About : Directs to About page.
+  <br />Contact : Directs to Contact page.
+
+
 ![Web About Page](/Design/About.png)
 ![Web Contact Page](/Design/Contact.png)
 
