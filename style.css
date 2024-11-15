@@ -11,9 +11,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("Home_Background.png");
+    background-image: url("HomeBackground.png");
     background-repeat: no-repeat;
-    height: 100vh;
 }
 /* logo design */ 
 #logo {
