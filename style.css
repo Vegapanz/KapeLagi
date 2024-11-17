@@ -266,7 +266,7 @@ nav a.active {
         opacity: 0; /* Start as invisible */
     }
     50% {
-        transform: scale(1.1); /* Scale slightly larger than normal */
+        transform: scale(1.5); /* Scale slightly larger than normal */
         opacity: 1; /* Full opacity */
     }
     100% {
