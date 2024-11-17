@@ -97,6 +97,8 @@ nav a.active {
     max-width: 1000px; /* Control the splash size */
     height: auto;
     object-fit: contain;
+    opacity: 0; /* Hide image initially */
+    animation: popUp 1.5s ease-out 2s forwards; /* Same pop-up animation */
 }
 
 
