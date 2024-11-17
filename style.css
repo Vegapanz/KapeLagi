@@ -89,7 +89,7 @@ nav a.active {
     top: 25%; /* Adjust this value to align with the left image */
     left: -3%; /* Adjust to align with the left image */
     z-index: 0; /* Ensure it is behind the left image */
-    animation: popUp 0.5s ease-out 2s forwards; /* Apply the pop-up animation with 2-second delay */
+    animation: popUp 0.1s ease-out 2s forwards; /* Apply the pop-up animation with 2-second delay */
 }
 
 .coffee-splash img {
@@ -98,7 +98,7 @@ nav a.active {
     height: auto;
     object-fit: contain;
     opacity: 0; /* Hide image initially */
-    animation: popUp 0.5s ease-out 2s forwards; /* Same pop-up animation */
+    animation: popUp 0.1s ease-out 2s forwards; /* Same pop-up animation */
 }
 
 
