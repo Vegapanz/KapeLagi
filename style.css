@@ -98,7 +98,7 @@ nav a.active {
     height: auto;
     object-fit: contain;
     opacity: 0; /* Hide image initially */
-    animation: popUp 1.5s ease-out 2s forwards; /* Same pop-up animation */
+    animation: popUp 0.5s ease-out 2s forwards; /* Same pop-up animation */
 }
 
 
