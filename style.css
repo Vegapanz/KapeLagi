@@ -19,7 +19,7 @@ body {
     margin: 0;
     transition: background-color 0.5s ease; /* Smooth transition for background color */
   }
-        
+
 
 /* Logo Design */
 #logo {
@@ -451,6 +451,118 @@ nav a.active {
     max-width: 1200px; /* Adjust for responsive size */
     text-align: center; /* Center align text within */
 }
+/******************* CONTACT **********************/
+
+/* Contact Form Styles */
+.contact-form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E5E5CB;
+    padding: 10rem 40rem;
+    border-radius: 100px;
+    max-width: 700px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Arrange form and icons side by side */
+    align-items: center; /* Vertically center content */
+}
+
+
+/* Contact Heading */
+/* Adjust the Contact Heading */
+.contact-heading {
+    font-family: "Climate Crisis", serif;
+    font-size: 2.5rem;
+    color: #D5CEA3;
+    margin-bottom: 1.5rem;
+    position: absolute;
+    top: 0;  /* Align the heading to the top of the contact form */
+    left: 50%;  /* Center the heading horizontally */
+    transform: translateX(-50%);  /* Adjust horizontal position */
+    padding-top: 1rem;  /* Add some space at the top */
+}
+/* Form Styles */
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form button {
+    padding: 1rem;
+    background-color: #D5CEA3;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1A120B;
+    color: white;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Arrange icons vertically */
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.social-icons .icon:hover {
+    transform: scale(1.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .social-icons .icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+
 /************ Animations ***********/
 @keyframes fadeIn {
     from {
