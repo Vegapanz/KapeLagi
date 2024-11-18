@@ -17,10 +17,13 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
+    position: relative;
     transition: background-color 0.5s ease; /* Smooth transition for background color */
   }
-
-
+  .transparent-picture img{
+    width: 90%;
+    height: auto;
+  }
 /* Logo Design */
 #logo {
     position: fixed;
@@ -237,10 +240,21 @@ nav a.active {
         width: 80%;
     }
 
+    .coffee-splash {
+        left: -13%; /* Adjust to align with the left image */
+        z-index: 0; /* Ensure it is behind the left image */
+        animation: popUp 0.5s ease-out ; /* Apply the pop-up animation with 2-second delay */
+    }
+    
+    .coffee-splash img {
+        width: 100%;
+    }
+
     .right-paragraph-container {
         width: 50%;
         font-size: 1rem;
         right: 5%;
+        z-index: 1;
     }
 
     .right-paragraph-container h2 {
@@ -262,17 +276,32 @@ nav a.active {
         flex-direction: column;
         padding: 0.5rem;
     }
-
+    .coffee-splash {
+        position: fixed;
+        top: 20%; /* Adjust this value to align with the left image */
+        left: -5%; /* Adjust to align with the left image */
+        z-index: 0; /* Ensure it is behind the left image */
+        animation: popUp 0.5s ease-out ; /* Apply the pop-up animation with 2-second delay */
+    }
+    
+    .coffee-splash img {
+        width: 250%;
+        max-width: 768px;
+        z-index: 0;
+    }
     .left-image-container {
         position: static;
         margin: 1rem auto;
         transform: none;
         text-align: center;
+        z-index: 1;
     }
 
     .left-image-container img {
         width: 70%;
+        z-index: 1;
     }
+  
 
     .right-paragraph-container {
         position: static;
@@ -283,6 +312,7 @@ nav a.active {
 
     .right-paragraph-container h2 {
         font-size: 1.8rem;
+        text-align: center;
     }
     .dropdown-content .color-brown:hover {
         color: #3C2A21;
@@ -292,6 +322,26 @@ nav a.active {
     }
     .dropdown-content .color-Beige:hover {
         color: #A77C82;
+    }
+    .contact-form-container {
+        width: 90%; /* Adjust width on smaller screens */
+        padding: 1rem;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .contact-form-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-column,
+    .icons-column {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -453,112 +503,144 @@ nav a.active {
 }
 /******************* CONTACT **********************/
 
-/* Contact Form Styles */
 .contact-form-container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #E5E5CB;
-    padding: 10rem 40rem;
+    transform: translate(-50%, -50%); /* Center the container */
+    background-color: rgba(229, 229, 203, 0.8); /* Semi-transparent background */
     border-radius: 100px;
-    max-width: 700px;
-    width: 100%;
-    color: white;
+    padding: 4rem;
+    width: 100%; /* Adjust width */
+    max-width: 1200px; /* Max width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-between; /* Arrange form and icons side by side */
-    align-items: center; /* Vertically center content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
 }
 
-
-/* Contact Heading */
-/* Adjust the Contact Heading */
+/* Heading Styles */
 .contact-heading {
-    font-family: "Climate Crisis", serif;
-    font-size: 2.5rem;
-    color: #D5CEA3;
-    margin-bottom: 1.5rem;
-    position: absolute;
-    top: 0;  /* Align the heading to the top of the contact form */
-    left: 50%;  /* Center the heading horizontally */
-    transform: translateX(-50%);  /* Adjust horizontal position */
-    padding-top: 1rem;  /* Add some space at the top */
+    font-size: 3.5rem;
+    font-family: "Modak", sans-serif;
+    color: #1A120B;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
 }
-/* Form Styles */
-.contact-form .form-group {
+
+/* Form Wrapper */
+.contact-form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Left Column for Form */
+.form-column {
+    flex: 1; /* Take up 50% of the container */
+    padding-right: 1.5rem; /* Spacing between the columns */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    font-family: "Modak", system-ui, sans-serif;
+    font-size: 1.5rem;
+    color: #1A120B;
+    font-weight: 400;
+}
+
+.contact-form input {
+    font-family: "Lekton", monospace;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #1A120B;
+    border-radius: 10px;
+    background-color: #D5CEA3;
+    color: #000000;
+    margin-top: 0.3rem;
+}
+
+.contact-form textarea {
+    font-family: "Lekton", monospace;
+    line-height: 1.5;
+    width: 100%;
+    height: 200px; /* Increase the height to make it larger */
+    padding: 1rem;  /* Add more padding for better spacing */
+    font-size: 1rem; /* Larger font size for better readability */
+    border: 2px solid #1A120B;
+    border-radius: 10px;
+    background-color: #D5CEA3;
+    color: #000000;
+    margin-top: 0.3rem;
+    resize: vertical; /* Allow the user to resize the textarea vertically */
+}
+
+.contact-form button {
+    padding: 0.8rem;
+    background-color: #1A120B;
+    border: none;
+    border-radius: 10px;
+    color: #D5CEA3;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Modak", system-ui, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+
+.contact-form button:hover {
+    background-color: #D5CEA3;
+    color: #1A120B;
+}
+
+/* Right Column for Icons */
+.icons-column {
+    flex: 0.7; /* Take up 50% of the container */
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 5rem;
+}
+
+.social-icons {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.contact-form label {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    padding: 0.8rem;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.contact-form button {
-    padding: 1rem;
-    background-color: #D5CEA3;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #1A120B;
-    color: white;
-}
-
-/* Social Icons Container */
-.social-icons {
+.social-icons a {
+    text-decoration: none;
+    color: #1A120B;
     display: flex;
-    flex-direction: column; /* Arrange icons vertically */
-    gap: 1rem;
     align-items: center;
+    margin-bottom: 1rem;
+    font-family: "Lekton", monospace;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.social-icons a:hover {
+    color: #FFFFFF;
 }
 
 .social-icons .icon {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-.social-icons .icon:hover {
-    transform: scale(1.2);
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .contact-form-container {
-        padding: 1.5rem;
-        width: 90%;
-    }
-
-    .contact-heading {
-        font-size: 2rem;
-    }
-
-    .contact-form input, 
-    .contact-form textarea {
-        font-size: 0.9rem;
-    }
-
-    .social-icons .icon {
-        width: 35px;
-        height: 35px;
-    }
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
 }
 
 
@@ -587,8 +669,22 @@ nav a.active {
       transform: translateX(0); /* End at the original position */
     }
   }
+
+  @keyframes slideDownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-35%); /* Slide in from the left */
+    }
+    to {
+      opacity: 2;
+      transform: translateY(0); /* End at the original position */
+    }
+  }
   
   /* Apply the animation to an element */
+.slide-down-fade{
+    animation: slideDownFade 2s ease-in;
+}
 .slide-in-fade {
     animation: slideInFade 2s ease-in;
 }
@@ -605,4 +701,8 @@ nav a.active {
         transform: scale(1); /* Set to normal size */
         opacity: 1; /* Full opacity */
     }
+}
+
+.pop-up{
+    animation: popUp 1s ease-out ;
 }
