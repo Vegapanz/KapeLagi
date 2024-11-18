@@ -10,14 +10,16 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("Background.png");
+    background-image: url("HomeBackground.png");
     background-repeat: no-repeat;
-    background-size: cover; /* Ensure background covers the screen */
-    background-attachment: fixed; /* Optional: This makes the background image fixed during scrolling */
-    height: 100vh; /* Ensure the body takes full viewport height */
-    width: 100vw; /* Ensure the body takes full viewport width */
-    margin: 0; /* Remove default margin */
-}
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+  }
+        
 
 /* Logo Design */
 #logo {
@@ -28,7 +30,7 @@ body {
 }   
 
 #logo img {
-    width: 30%; /* Adjust size for responsiveness */
+    width: 25%; /* Adjust size for responsiveness */
     height: auto;
 }
 
@@ -89,6 +91,7 @@ nav a.active {
     top: 25%; /* Adjust this value to align with the left image */
     left: -3%; /* Adjust to align with the left image */
     z-index: 0; /* Ensure it is behind the left image */
+    animation: popUp 0.5s ease-out ; /* Apply the pop-up animation with 2-second delay */
 }
 
 .coffee-splash img {
@@ -97,7 +100,7 @@ nav a.active {
     height: auto;
     object-fit: contain;
     opacity: 0; /* Hide image initially */
-    animation: popUp 1s ease-out 2s forwards; /* Same pop-up animation */
+    animation: popUp 0.5s ease-out 2s forwards; /* Same pop-up animation */
 }
 
 
@@ -121,14 +124,95 @@ nav a.active {
 }
 
 .right-paragraph-container h2 {
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Climate Crisis", serif;
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
     color: #FFFFFF;
     text-align: right;
     padding-top: 20%;
+    letter-spacing: 0.3rem;
 }
+
+/*********** Product CSS *********/
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative; /* Position relative for the dropdown container */
+    display: inline-block;
+    width: fit-content; /* Ensures dropdown button fits content */
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    font-family: "Modak", system-ui, sans-serif;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;  /* Same padding as the dropdown items */
+    border-radius: 20px; /* Oval shape by default */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.1rem;
+    width: 100%;
+}
+
+/* Hover state: Remove the border-radius to make the button rectangular */
+.dropbtn:hover, .dropdown:hover .dropbtn {
+    background-color: #D5CEA3;
+    color: #1A120B;
+    border-radius: 0;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the dropdown container */
+    top: 100%; /* Positioned directly below the button */
+    left: 0;
+    background-color: #D5CEA3;
+    min-width: 100%; /* Match the button width */
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+    overflow: hidden; /* Prevent items from overflowing */
+    padding: 0;
+}
+
+/* Dropdown items */
+.dropdown-content a {
+    color: white;
+    padding: 0.5rem 1rem;  /* Same padding as the button */
+    text-decoration: none;
+    display: block;
+    font-family: "Modak", system-ui, sans-serif;
+    font-size: 1.5rem;  /* Same font size as the button */
+    letter-spacing: 0.1rem;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-content a:hover {
+    background-color: #FFFFFF;
+    border-radius: 0; /* Remove oval corners on hover */
+}
+
+.dropdown-content .color-brown:hover {
+    color: #3C2A21;
+}
+.dropdown-content .color-pink:hover {
+    color: #933333;
+}
+.dropdown-content .color-Beige:hover {
+    color: #A77C82;
+}
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
@@ -145,8 +229,8 @@ nav a.active {
     .left-image-container {
         left: 5%;
         top: auto;
-        bottom: 15%; /* Adjust for better spacing */
-        transform: rotate(10deg); /* Reduce rotation slightly */
+        bottom: 15%;
+        transform: rotate(10deg);
     }
 
     .left-image-container img {
@@ -162,10 +246,14 @@ nav a.active {
     .right-paragraph-container h2 {
         font-size: 2rem;
     }
-    .coffee-splash {
-        top: 40%; /* Adjust for medium-sized screens */
-        left: -5%; /* Move more to the left for medium screens */
-        max-width: 600px;
+    .dropdown-content .color-brown:hover {
+        color: #3C2A21;
+    }
+    .dropdown-content .color-pink:hover {
+        color: #933333;
+    }
+    .dropdown-content .color-Beige:hover {
+        color: #A77C82;
     }
 }
 
@@ -174,16 +262,12 @@ nav a.active {
         flex-direction: column;
         padding: 0.5rem;
     }
-    body{
-        background-image: url(Images/Background.png);
-        background-repeat: no-repeat;
-        background-size: cover; /* Ensure background covers the screen */
-    }
+
     .left-image-container {
         position: static;
         margin: 1rem auto;
-        transform: none; /* Remove rotation */
-        text-align: center; /* Center-align for mobile */
+        transform: none;
+        text-align: center;
     }
 
     .left-image-container img {
@@ -199,26 +283,25 @@ nav a.active {
 
     .right-paragraph-container h2 {
         font-size: 1.8rem;
-        text-align: center;
     }
-    .coffee-splash {
-        top: 10%; /* Adjust for smaller screens */
-        left: -10%; /* Move even more to the left for smaller screens */
-        max-width: 500px;
+    .dropdown-content .color-brown:hover {
+        color: #3C2A21;
+    }
+    .dropdown-content .color-pink:hover {
+        color: #933333;
+    }
+    .dropdown-content .color-Beige:hover {
+        color: #A77C82;
     }
 }
 
 @media (max-width: 480px) {
-    nav {
-        padding: 0.5rem;
-    }
-
     nav a {
         font-size: 1rem;
     }
 
     .left-image-container img {
-        width: 90%; /* Adjust for small screens */
+        width: 90%;
     }
 
     .right-paragraph-container {
@@ -229,9 +312,146 @@ nav a.active {
     .right-paragraph-container h2 {
         font-size: 1.5rem;
     }
+    .dropdown-content .color-brown:hover {
+        color: #3C2A21;
+    }
+    .dropdown-content .color-pink:hover {
+        color: #933333;
+    }
+    .dropdown-content .color-Beige:hover {
+        color: #A77C82;
+    }
 }
 
+/******** Carousel ******/
+/* Centering the carousel */
+.carousel-container {
+    display: flex;  /* Use flexbox to center content */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    height: 100vh;  /* Full viewport height */
+    width: 100%;  /* Full width of the page */
+    margin: 0 auto;  /* Center container on the page */
+    overflow: hidden; /* Prevent horizontal scrollbars */
+    z-index: 1;  /* Ensure it's above the background */
+}
 
+  
+.carousel {
+    display: flex;  /* Arrange slides in a row */
+    transition: transform 0.5s ease-in-out;  /* Smooth transition for slides */
+}
+
+  
+.carousel-slide {
+    min-width: 100%;  /* Make each slide take up full width of the container */
+    display: flex;
+    justify-content: center;  /* Center content within each slide */
+    align-items: center;  /* Center content vertically */
+    padding: 20px;
+    height: 300px;  /* Fixed height for the carousel slides */
+    box-sizing: border-box;
+}
+  
+.carousel-slide img {
+    max-width: 60%;  /* Limit image size */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+  
+   .coffee-text {
+    position: absolute;
+    bottom: 10%; /* Position text 10px from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    font-size: 4rem; /* Adjust font size */
+    color: #FFFFFF; /* White text color */
+    font-family: "Climate Crisis", serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+
+  .carousel-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-image {
+    max-width: 45%; /* Adjust to fit the image on the left */
+    height: 100%; /* Set the image height to match the height of the container */
+    object-fit: contain; /* Ensure the image scales without distorting */
+    border-radius: 10px;
+  }
+  
+  .details {
+    max-width: 50%; /* Adjust width for the details */
+    color: #FFFFFF;
+    text-align: left; /* Align text to the left */
+    height: 100%; /* Ensure the details section fills the height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+  }
+  
+  .details h1 {
+    font-family: "Climate Crisis", serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.3rem;
+    margin-bottom: 10%;
+    text-transform: uppercase;
+  }
+  
+  .details p {
+    font-family: "Lekton", monospace;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;  /* Position vertically centered */
+    transform: translateY(-50%);  /* Center vertically */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    z-index: 10;  /* Ensure buttons are above slides */
+}
+  
+.carousel-btn.prev {
+    left: 10px;  /* Position "previous" button to the left */
+}
+
+.carousel-btn.next {
+    right: 10px;  /* Position "next" button to the right */
+}
+
+.carousel-btn:hover {
+    background-color: #D5CEA3;
+    color: #1A120B;
+}
+  
+  /* Active Slide */
+  .carousel-slide:not(.active) {
+    display: none;
+  }
+  .carousel-container, .main-content {
+    width: 100%;
+    max-width: 1200px; /* Adjust for responsive size */
+    text-align: center; /* Center align text within */
+}
+/************ Animations ***********/
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -241,7 +461,7 @@ nav a.active {
     }
 }
 .fade-in {
-    animation: fadeIn 1s ease-in;
+    animation: fadeIn 2s ease-in;
 }
 
 /* Define the slide-in fade animation */
@@ -266,7 +486,7 @@ nav a.active {
         opacity: 0; /* Start as invisible */
     }
     50% {
-        transform: scale(1.5); /* Scale slightly larger than normal */
+        transform: scale(1.1); /* Scale slightly larger than normal */
         opacity: 1; /* Full opacity */
     }
     100% {
