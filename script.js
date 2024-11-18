@@ -43,3 +43,37 @@ prevBtn.addEventListener('click', () => {
 // Initialize
 updateSlides();
 updateBackgroundColor(); // Set initial background color of the page
+
+
+// Validate email function
+document.addEventListener('DOMContentLoaded', function() {
+    // Accessing the form by its ID
+    const form = document.getElementById('contactForm');
+    
+    // Event listener for form submission
+    form.addEventListener('submit', function(event) {
+        // Prevent the form from submitting to allow validation
+        event.preventDefault();
+
+        // Get the email input and its value
+        const emailInput = document.getElementById('email');
+        const email = emailInput.value;
+        
+        // Regular expression for a valid email address
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        // Validate the email
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address!');
+            emailInput.focus();  // Focus on the email input field for correction
+            return false;  // Prevent form submission
+        }
+        
+        // If the email is valid, show success (you can replace this with form submission)
+        alert('Form submitted successfully!');
+        // Uncomment below to allow actual form submission if needed
+        // form.submit();
+    });
+});
+
+
