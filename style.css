@@ -21,8 +21,13 @@ body {
     transition: background-color 0.5s ease; /* Smooth transition for background color */
   }
   .transparent-picture img{
-    width: 90%;
+    width: 50%;
     height: auto;
+  }
+  .transparent-picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 /* Logo Design */
 #logo {
@@ -570,6 +575,12 @@ nav a.active {
     color: #000000;
     margin-top: 0.3rem;
 }
+.contact-form span{
+    font-family: "Lekton", monospace;
+    line-height: 1.5;
+    font-size: 16px;
+    color: red;
+}
 
 .contact-form textarea {
     font-family: "Lekton", monospace;
@@ -585,7 +596,9 @@ nav a.active {
     margin-top: 0.3rem;
     resize: vertical; /* Allow the user to resize the textarea vertically */
 }
-
+.email-error{
+    transition: top 0.5s;
+}
 .contact-form button {
     padding: 0.8rem;
     background-color: #1A120B;
