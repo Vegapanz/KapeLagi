@@ -41,7 +41,7 @@
         <div class="transparent-picture"> 
             <img src="ContactBackground.png" alt="splash_background">
         </div>
-        <!-- Contact Form Container -->
+                <!-- Contact Form Container -->
         <div class="contact-form-container">
             <!-- Heading -->
             <h2 class="contact-heading slide-down-fade">Contact</h2>
@@ -50,14 +50,16 @@
             <div class="contact-form-wrapper">
                 <div class="form-column">
                     <!-- Left Column: Email and Message -->
-                    <form class="contact-form fade-in" >
+                    <form class="contact-form fade-in" action="https://api.web3forms.com/submit" method="POST">
                         <div class="form-group" >
-                            <label for="email" class="email">Email:</label>
-                            <input type="email" id="email" name="email" required placeholder="Your Email">
+                            <input type="hidden" name="access_key" value="31e33a22-d18f-4773-afd6-7ac2a6c36cf4">
+                            <label for="email" class="email" id="email-label">Email:</label>
+                            <input type="email" id="email-input" class="contact-inputs" name="email" onkeyup="validateEmail()" required placeholder="Your Email">
+                            <span id="email-error"></span>
                         </div>
                         <div class="form-group fade-in">
                             <label for="message" class="message">Message:</label>
-                            <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                            <textarea id="message" name="message" class="contact-inputs" required placeholder="Your Message"></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
@@ -88,6 +90,6 @@
         </div>
     </body>
     
-    <script src="script.js"></script>
+    <script src="email.js"></script>
 </body>
 </html>
