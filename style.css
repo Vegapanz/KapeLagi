@@ -280,6 +280,11 @@ nav a.active {
     nav {
         flex-direction: column;
         padding: 0.5rem;
+        display: none;
+    }
+
+    #logo{
+        display: none   ;
     }
     .coffee-splash {
         position: fixed;
