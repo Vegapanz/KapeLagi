@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("Background.png");
+    background-image: url("Images/Background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -265,15 +265,6 @@ nav a.active {
     .right-paragraph-container h2 {
         font-size: 2rem;
     }
-    .dropdown-content .color-brown:hover {
-        color: #3C2A21;
-    }
-    .dropdown-content .color-pink:hover {
-        color: #933333;
-    }
-    .dropdown-content .color-Beige:hover {
-        color: #A77C82;
-    }
 }
 
 @media (max-width: 768px) {
@@ -324,15 +315,6 @@ nav a.active {
         font-size: 1.8rem;
         text-align: center;
     }
-    .dropdown-content .color-brown:hover {
-        color: #3C2A21;
-    }
-    .dropdown-content .color-pink:hover {
-        color: #933333;
-    }
-    .dropdown-content .color-Beige:hover {
-        color: #A77C82;
-    }
     .contact-form-container {
         width: 90%; /* Adjust width on smaller screens */
         padding: 1rem;
@@ -359,6 +341,7 @@ nav a.active {
 @media (max-width: 480px) {
     nav a {
         font-size: 1rem;
+        display: none;
     }
 
     .left-image-container img {
@@ -373,14 +356,8 @@ nav a.active {
     .right-paragraph-container h2 {
         font-size: 1.5rem;
     }
-    .dropdown-content .color-brown:hover {
-        color: #3C2A21;
-    }
-    .dropdown-content .color-pink:hover {
-        color: #933333;
-    }
-    .dropdown-content .color-Beige:hover {
-        color: #A77C82;
+    .contact-form-container {
+        margin-top: 4rem;
     }
 }
 
@@ -661,7 +638,6 @@ nav a.active {
     height: 30px;
     margin-right: 1rem;
 }
-
 
 
 /************ Animations ***********/
