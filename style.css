@@ -534,6 +534,7 @@ nav a.active {
     font-family: "Modak", sans-serif;
     font-weight: 400;
     font-size: 3rem;
+    text-transform: uppercase;
     margin-bottom: 1rem;
     color: #1A120B;
 }
