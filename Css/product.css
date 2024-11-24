@@ -206,7 +206,8 @@ nav a.active {
     filter: drop-shadow(0 150px 50px #9e0c0c55);
 }
 .carousel .list .item .image figcaption{
-    font-family: 'Aboreto';
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
     font-weight: bold;
     font-size: 1.3em;
     text-align: right;
