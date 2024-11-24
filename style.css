@@ -361,134 +361,6 @@ nav a.active {
     }
 }
 
-/******** Carousel ******/
-/* Centering the carousel */
-.carousel-container {
-    display: flex;  /* Use flexbox to center content */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    height: 100vh;  /* Full viewport height */
-    width: 100%;  /* Full width of the page */
-    margin: 0 auto;  /* Center container on the page */
-    overflow: hidden; /* Prevent horizontal scrollbars */
-    z-index: 1;  /* Ensure it's above the background */
-}
-
-  
-.carousel {
-    display: flex;  /* Arrange slides in a row */
-    transition: transform 0.5s ease-in-out;  /* Smooth transition for slides */
-}
-
-  
-.carousel-slide {
-    min-width: 100%;  /* Make each slide take up full width of the container */
-    display: flex;
-    justify-content: center;  /* Center content within each slide */
-    align-items: center;  /* Center content vertically */
-    padding: 20px;
-    height: 300px;  /* Fixed height for the carousel slides */
-    box-sizing: border-box;
-}
-  
-.carousel-slide img {
-    max-width: 60%;  /* Limit image size */
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-  
-   .coffee-text {
-    position: absolute;
-    bottom: 10%; /* Position text 10px from the bottom */
-    left: 50%;
-    transform: translateX(-50%); /* Center the text horizontally */
-    font-size: 4rem; /* Adjust font size */
-    color: #FFFFFF; /* White text color */
-    font-family: "Climate Crisis", serif;
-    font-size: 3.5rem;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-  }
-
-  .carousel-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .product-image {
-    max-width: 45%; /* Adjust to fit the image on the left */
-    height: 100%; /* Set the image height to match the height of the container */
-    object-fit: contain; /* Ensure the image scales without distorting */
-    border-radius: 10px;
-  }
-  
-  .details {
-    max-width: 50%; /* Adjust width for the details */
-    color: #FFFFFF;
-    text-align: left; /* Align text to the left */
-    height: 100%; /* Ensure the details section fills the height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center text vertically */
-  }
-  
-  .details h1 {
-    font-family: "Climate Crisis", serif;
-    font-size: 3.5rem;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.3rem;
-    margin-bottom: 10%;
-    text-transform: uppercase;
-  }
-  
-  .details p {
-    font-family: "Lekton", monospace;
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-  
-  .carousel-btn {
-    position: absolute;
-    top: 50%;  /* Position vertically centered */
-    transform: translateY(-50%);  /* Center vertically */
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    z-index: 10;  /* Ensure buttons are above slides */
-}
-  
-.carousel-btn.prev {
-    left: 10px;  /* Position "previous" button to the left */
-}
-
-.carousel-btn.next {
-    right: 10px;  /* Position "next" button to the right */
-}
-
-.carousel-btn:hover {
-    background-color: #D5CEA3;
-    color: #1A120B;
-}
-  
-  /* Active Slide */
-  .carousel-slide:not(.active) {
-    display: none;
-  }
-  .carousel-container, .main-content {
-    width: 100%;
-    max-width: 1200px; /* Adjust for responsive size */
-    text-align: center; /* Center align text within */
-}
 /******************* CONTACT **********************/
 
 .contact-form-container {
@@ -639,6 +511,54 @@ nav a.active {
     margin-right: 1rem;
 }
 
+/* Our History Section */
+#our-history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a dark background behind content */
+}
+
+.history-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%; /* Adjust for responsiveness */
+    color: #1A120B;
+}
+
+.history-container h1 {
+    font-family: "Modak", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1A120B;
+}
+
+.history-container p {
+    font-family: "Lekton", monospace;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .history-container {
+        padding: 1.5rem;
+    }
+
+    .history-container h1 {
+        font-size: 2rem;
+    }
+
+    .history-container p {
+        font-size: 1rem;
+    }
+}
 
 /************ Animations ***********/
 @keyframes fadeIn {
