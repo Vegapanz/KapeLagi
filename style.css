@@ -18,6 +18,7 @@ body {
     width: 100vw;
     margin: 0;
     position: relative;
+    overflow-x: hidden;
     transition: background-color 0.5s ease; /* Smooth transition for background color */
   }
   .transparent-picture img{
@@ -518,33 +519,33 @@ nav a.active {
     align-items: center;
     height: 100vh;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a dark background behind content */
 }
 
 .history-container {
-    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
     border-radius: 15px;
     padding: 2rem;
-    max-width: 800px;
-    width: 90%; /* Adjust for responsiveness */
-    color: #1A120B;
+    max-width: 1500px;
+    width: 100%; /* Adjust for responsiveness */
+    color: #FFFFFF;
 }
 
 .history-container h1 {
-    font-family: "Modak", sans-serif;
+    font-family: "Climate Crisis", serif;
+    font-size: 5rem;
     font-weight: 400;
-    font-size: 3rem;
-    text-transform: uppercase;
     margin-bottom: 1rem;
-    color: #1A120B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    animation: slideDownFade 1s ease-out;
 }
 
 .history-container p {
     font-family: "Lekton", monospace;
     font-size: 1.2rem;
-    line-height: 1.6;
     margin-bottom: 1.5rem;
-    color: #333;
+    margin: 0 10%;
+    animation: fadeIn 1s ease-in-out;
+    color: #FFFFFF;
 }
 
 /* Media Query for Smaller Screens */
