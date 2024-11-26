@@ -19,7 +19,7 @@ body {
     margin: 0;
     position: relative;
     overflow-x: hidden;
-    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    transition: background-color 0.5s ease; 
   }
   .transparent-picture img{
     width: 50%;
@@ -30,7 +30,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-/* Logo Design */
+/****************** Logo Design ***************/
 #logo {
     position: fixed;
     top: 3.5rem;
@@ -39,11 +39,11 @@ body {
 }   
 
 #logo img {
-    width: 25%; /* Adjust size for responsiveness */
+    width: 25%; 
     height: auto;
 }
 
-/* Navbar Styles */
+/************* Navbar ************/
 nav {
     position: fixed;
     top: 0;
@@ -74,54 +74,54 @@ nav a.active {
     color: #1A120B;
 }
 
-/* Left Image */
 
-  /* Existing styles for the container */
+
+
   .left-image-container {
     position: fixed;
-    top: 30%; /* Center vertically */
-    left: 5%; /* Adjust for responsiveness */
+    top: 30%; 
+    left: 5%; 
     transform: translateY(-50%) rotate(14deg);
-    animation: fadeIn 1.5s ease-out; /* Add the fade-in animation */
-    z-index: 1; /* Ensure the left image is on top */
+    animation: fadeIn 1.5s ease-out; 
+    z-index: 1; 
   }
   
-  /* Existing styles for the image */
+
   .left-image-container img {
       width: 100%;
-      max-width: 900px; /* Limit size for larger screens */
+      max-width: 900px; 
       height: auto;
   }
-/* Add Pop-up Animation for the Coffee Splash */
 
-/* Apply pop-up animation to .coffee-splash with 2-second delay */
+
+
 .coffee-splash {
     position: fixed;
-    top: 25%; /* Adjust this value to align with the left image */
-    left: -3%; /* Adjust to align with the left image */
-    z-index: 0; /* Ensure it is behind the left image */
-    animation: popUp 0.5s ease-out ; /* Apply the pop-up animation with 2-second delay */
+    top: 25%; 
+    left: -3%; 
+    z-index: 0; 
+    animation: popUp 0.5s ease-out ;
 }
 
 .coffee-splash img {
     width: 200%;
-    max-width: 1000px; /* Control the splash size */
+    max-width: 1000px; 
     height: auto;
     object-fit: contain;
-    opacity: 0; /* Hide image initially */
-    animation: popUp 0.5s ease-out 2s forwards; /* Same pop-up animation */
+    opacity: 0;
+    animation: popUp 0.5s ease-out 2s forwards; 
 }
 
 
 
 
-/* Right Paragraph */
+
 .right-paragraph-container {
     position: fixed;
-    right: 10%; /* Adjust for responsiveness */
+    right: 10%; 
     top: 50%;
     transform: translateY(-50%);
-    width: 35%; /* Adjust width for readability */
+    width: 35%; 
     color: #FFFFFF;
     font-family: "Lekton", monospace;
     font-size: 1.2rem;
@@ -146,11 +146,11 @@ nav a.active {
 
 /*********** Product CSS *********/
 
-/* Dropdown Styles */
+
 .dropdown {
-    position: relative; /* Position relative for the dropdown container */
+    position: relative; 
     display: inline-block;
-    width: fit-content; /* Ensures dropdown button fits content */
+    width: fit-content; 
 }
 
 .dropbtn {
@@ -158,8 +158,8 @@ nav a.active {
     color: white;
     font-family: "Modak", system-ui, sans-serif;
     font-size: 1.5rem;
-    padding: 0.5rem 1rem;  /* Same padding as the dropdown items */
-    border-radius: 20px; /* Oval shape by default */
+    padding: 0.5rem 1rem;  
+    border-radius: 20px; 
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -167,43 +167,43 @@ nav a.active {
     width: 100%;
 }
 
-/* Hover state: Remove the border-radius to make the button rectangular */
+
 .dropbtn:hover, .dropdown:hover .dropbtn {
     background-color: #D5CEA3;
     color: #1A120B;
     border-radius: 0;
 }
 
-/* Dropdown Content (hidden by default) */
+
 .dropdown-content {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positioned relative to the dropdown container */
-    top: 100%; /* Positioned directly below the button */
+    display: none; 
+    position: absolute;
+    top: 100%; 
     left: 0;
     background-color: #D5CEA3;
-    min-width: 100%; /* Match the button width */
+    min-width: 100%;
     z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
-    overflow: hidden; /* Prevent items from overflowing */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
     padding: 0;
 }
 
-/* Dropdown items */
+/************ Dropdown items **********/
 .dropdown-content a {
     color: white;
-    padding: 0.5rem 1rem;  /* Same padding as the button */
+    padding: 0.5rem 1rem;  
     text-decoration: none;
     display: block;
     font-family: "Modak", system-ui, sans-serif;
-    font-size: 1.5rem;  /* Same font size as the button */
+    font-size: 1.5rem;  
     letter-spacing: 0.1rem;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease; 
 }
 
-/* Hover effect for dropdown items */
+
 .dropdown-content a:hover {
     background-color: #FFFFFF;
-    border-radius: 0; /* Remove oval corners on hover */
+    border-radius: 0; 
 }
 
 .dropdown-content .color-brown:hover {
@@ -215,7 +215,7 @@ nav a.active {
 .dropdown-content .color-Beige:hover {
     color: #A77C82;
 }
-/* Show dropdown on hover */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -223,7 +223,7 @@ nav a.active {
 
 
 
-/* Media Queries for Responsiveness */
+
 @media (max-width: 1024px) {
     nav {
         flex-wrap: wrap;
@@ -247,9 +247,9 @@ nav a.active {
     }
 
     .coffee-splash {
-        left: -13%; /* Adjust to align with the left image */
-        z-index: 0; /* Ensure it is behind the left image */
-        animation: popUp 0.5s ease-out ; /* Apply the pop-up animation with 2-second delay */
+        left: -13%; 
+        z-index: 0; 
+        animation: popUp 0.5s ease-out ; 
     }
     
     .coffee-splash img {
@@ -280,10 +280,10 @@ nav a.active {
     }
     .coffee-splash {
         position: fixed;
-        top: 20%; /* Adjust this value to align with the left image */
-        left: -5%; /* Adjust to align with the left image */
-        z-index: 0; /* Ensure it is behind the left image */
-        animation: popUp 0.5s ease-out ; /* Apply the pop-up animation with 2-second delay */
+        top: 20%; 
+        left: -5%; 
+        z-index: 0; 
+        animation: popUp 0.5s ease-out ; 
     }
     
     .coffee-splash img {
@@ -317,7 +317,7 @@ nav a.active {
         text-align: center;
     }
     .contact-form-container {
-        width: 90%; /* Adjust width on smaller screens */
+        width: 90%; 
         padding: 1rem;
         margin-top: 4rem;
     }
@@ -368,12 +368,12 @@ nav a.active {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the container */
-    background-color: rgba(229, 229, 203, 0.8); /* Semi-transparent background */
+    transform: translate(-50%, -50%); 
+    background-color: rgba(229, 229, 203, 0.8); 
     border-radius: 100px;
     padding: 4rem;
-    width: 100%; /* Adjust width */
-    max-width: 1200px; /* Max width */
+    width: 100%; 
+    max-width: 1200px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -381,7 +381,7 @@ nav a.active {
     justify-content: center;    
 }
 
-/* Heading Styles */
+
 .contact-heading {
     font-size: 3.5rem;
     font-family: "Modak", sans-serif;
@@ -393,17 +393,17 @@ nav a.active {
     font-weight: 400;
 }
 
-/* Form Wrapper */
+
 .contact-form-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-/* Left Column for Form */
+
 .form-column {
-    flex: 1; /* Take up 50% of the container */
-    padding-right: 1.5rem; /* Spacing between the columns */
+    flex: 1; 
+    padding-right: 1.5rem; 
 }
 
 .contact-form {
@@ -442,15 +442,15 @@ nav a.active {
     font-family: "Lekton", monospace;
     line-height: 1.5;
     width: 100%;
-    height: 200px; /* Increase the height to make it larger */
-    padding: 1rem;  /* Add more padding for better spacing */
-    font-size: 1rem; /* Larger font size for better readability */
+    height: 200px; 
+    padding: 1rem;  
+    font-size: 1rem; 
     border: 2px solid #1A120B;
     border-radius: 10px;
     background-color: #D5CEA3;
     color: #000000;
     margin-top: 0.3rem;
-    resize: vertical; /* Allow the user to resize the textarea vertically */
+    resize: vertical; 
 }
 .email-error{
     transition: top 0.5s;
@@ -475,9 +475,9 @@ nav a.active {
     color: #1A120B;
 }
 
-/* Right Column for Icons */
+
 .icons-column {
-    flex: 0.7; /* Take up 50% of the container */
+    flex: 0.7; 
     padding-left: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -534,7 +534,7 @@ nav a.active {
     border-radius: 15px;
     padding: 2rem;
     max-width: 1500px;
-    width: 100%; /* Adjust for responsiveness */
+    width: 100%; 
     color: #FFFFFF;
 }
 
@@ -542,7 +542,7 @@ nav a.active {
     border-radius: 15px;
     padding: 2rem;
     max-width: 1500px;
-    width: 100%; /* Adjust for responsiveness */
+    width: 100%; 
     color: #FFFFFF;
 }
 
@@ -728,8 +728,8 @@ nav a.active {
 }
 .team-social a {
     display: inline-block;
-    width: 40px;  /* Adjust the size of the icons */
-    height: 40px; /* Ensure the icons maintain their aspect ratio */
+    width: 40px; 
+    height: 40px; 
     margin-right: 5px;
     padding: 11px 0 10px 0;
     text-align: center;
@@ -738,12 +738,12 @@ nav a.active {
 
 .team-social img {
     width: 50%;
-    height: auto; /* Make sure the images maintain their aspect ratio */
+    height: auto; 
     border-radius: 10px;
 }
 
 .team-social a:hover img {
-    filter: brightness(0.8); /* Optional: Make the image slightly darker on hover */
+    filter: brightness(0.8); 
 }
 .team .team-social a.social-tw{
     background: #00acee;
@@ -811,7 +811,6 @@ nav a.active {
 
 
 
-/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .history-container {
         padding: 1.5rem;
