@@ -30,20 +30,21 @@ body {
     justify-content: center;
     align-items: center;
   }
-/****************** Logo Design ***************/
+
 #logo {
     position: fixed;
     top: 3.5rem;
     left: 5%;
-    z-index: 1000;
+    z-index: 101;
 }   
 
 #logo img {
     width: 25%; 
     height: auto;
+    z-index: 1000;
 }
 
-/************* Navbar ************/
+/**************** Navbar ***************/
 nav {
     position: fixed;
     top: 0;
@@ -53,7 +54,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    z-index: 1000;
+    z-index: 10;
 }
 
 nav a {
@@ -63,6 +64,7 @@ nav a {
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
+    font-weight: 400;
     border-radius: 20px;
     transition: all 0.3s ease;
     letter-spacing: 0.1rem;
@@ -73,7 +75,6 @@ nav a.active {
     background-color: #D5CEA3;
     color: #1A120B;
 }
-
 
 
 
@@ -176,19 +177,19 @@ nav a.active {
 
 
 .dropdown-content {
-    display: none; 
-    position: absolute;
+    display: none;
+    position: absolute; 
     top: 100%; 
     left: 0;
     background-color: #D5CEA3;
-    min-width: 100%;
+    min-width: 100%; 
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
     overflow: hidden; 
     padding: 0;
 }
 
-/************ Dropdown items **********/
+/* Dropdown items */
 .dropdown-content a {
     color: white;
     padding: 0.5rem 1rem;  
@@ -218,148 +219,6 @@ nav a.active {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-
-
-
-
-@media (max-width: 1024px) {
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 1.2rem;
-        margin: 0.2rem;
-    }
-
-    .left-image-container {
-        left: 5%;
-        top: auto;
-        bottom: 15%;
-        transform: rotate(10deg);
-    }
-
-    .left-image-container img {
-        width: 80%;
-    }
-
-    .coffee-splash {
-        left: -13%; 
-        z-index: 0; 
-        animation: popUp 0.5s ease-out ; 
-    }
-    
-    .coffee-splash img {
-        width: 100%;
-    }
-
-    .right-paragraph-container {
-        width: 50%;
-        font-size: 1rem;
-        right: 5%;
-        z-index: 1;
-    }
-
-    .right-paragraph-container h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 0.5rem;
-        display: none;
-    }
-
-    #logo{
-        display: none   ;
-    }
-    .coffee-splash {
-        position: fixed;
-        top: 20%; 
-        left: -5%; 
-        z-index: 0; 
-        animation: popUp 0.5s ease-out ; 
-    }
-    
-    .coffee-splash img {
-        width: 250%;
-        max-width: 768px;
-        z-index: 0;
-    }
-    .left-image-container {
-        position: static;
-        margin: 1rem auto;
-        transform: none;
-        text-align: center;
-        z-index: 1;
-    }
-
-    .left-image-container img {
-        width: 70%;
-        z-index: 1;
-    }
-  
-
-    .right-paragraph-container {
-        position: static;
-        margin: 1rem auto;
-        width: 90%;
-        text-align: center;
-    }
-
-    .right-paragraph-container h2 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-    .contact-form-container {
-        width: 90%; 
-        padding: 1rem;
-        margin-top: 4rem;
-    }
-
-    .contact-heading {
-        font-size: 2rem;
-    }
-
-    .contact-form-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .form-column,
-    .icons-column {
-        padding: 0;
-        width: 100%;
-        margin-bottom: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    nav a {
-        font-size: 1rem;
-        display: none;
-    }
-
-    .left-image-container img {
-        width: 90%;
-    }
-
-    .right-paragraph-container {
-        width: 100%;
-        font-size: 0.9rem;
-    }
-
-    .right-paragraph-container h2 {
-        font-size: 1.5rem;
-    }
-    .contact-form-container {
-        margin-top: 4rem;
-    }
 }
 
 /******************* CONTACT **********************/
@@ -403,7 +262,7 @@ nav a.active {
 
 .form-column {
     flex: 1; 
-    padding-right: 1.5rem; 
+    padding-right: 1.5rem;
 }
 
 .contact-form {
@@ -442,9 +301,9 @@ nav a.active {
     font-family: "Lekton", monospace;
     line-height: 1.5;
     width: 100%;
-    height: 200px; 
+    height: 200px;
     padding: 1rem;  
-    font-size: 1rem; 
+    font-size: 1rem;
     border: 2px solid #1A120B;
     border-radius: 10px;
     background-color: #D5CEA3;
@@ -774,8 +633,255 @@ nav a.active {
     background: #222222;
 }
 
+/***************************** Footer  ****************************/
+#main-footer {
+    background-image: linear-gradient(#3C2A21, #1A120B);
+    color: #FFFFFF;
+    padding: 3rem 5%;
+}
 
-/* Mobile Responsive */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+}
+
+.footer-section h4 {
+    font-family: "Climate Crisis", serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    color: #D5CEA3;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-family: "Lekton", monospace;
+}
+
+.footer-section ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Lekton", monospace;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #D5CEA3;
+}
+
+.social-icons-footer {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons-footer a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.social-icons-footer a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons-footer img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    font-family: "Lekton", monospace;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+
+.dropdown .sub-menu {
+    display: none;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.dropdown:hover .sub-menu {
+    display: block;
+}
+
+.dropdown .sub-menu li {
+    margin-bottom: 0.25rem;
+}
+
+
+/************** Media Queries for Responsiveness ***************/
+@media (max-width: 1024px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        margin: 0.2rem;
+    }
+
+    .left-image-container {
+        left: 5%;
+        top: auto;
+        bottom: 15%;
+        transform: rotate(10deg);
+    }
+
+    .left-image-container img {
+        width: 80%;
+    }
+
+    .coffee-splash {
+        left: -13%; 
+        z-index: 0; 
+        animation: popUp 0.5s ease-out ; 
+    }
+    
+    .coffee-splash img {
+        width: 100%;
+    }
+
+    .right-paragraph-container {
+        width: 50%;
+        font-size: 1rem;
+        right: 5%;
+        z-index: 1;
+    }
+
+    .right-paragraph-container h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 0.5rem;
+        display: none;
+    }
+
+    #logo{
+        display: none   ;
+    }
+    .coffee-splash {
+        position: fixed;
+        top: 20%; 
+        left: -5%; 
+        z-index: 0; 
+        animation: popUp 0.5s ease-out ; 
+    }
+    
+    .coffee-splash img {
+        width: 250%;
+        max-width: 768px;
+        z-index: 0;
+    }
+    .left-image-container {
+        position: static;
+        margin: 1rem auto;
+        transform: none;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .left-image-container img {
+        width: 70%;
+        z-index: 1;
+    }
+  
+
+    .right-paragraph-container {
+        position: static;
+        margin: 1rem auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .right-paragraph-container h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .contact-form-container {
+        width: 90%; 
+        padding: 1rem;
+        margin-top: 4rem;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .contact-form-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-column,
+    .icons-column {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 1rem;
+        display: none;
+    }
+
+    .left-image-container img {
+        width: 90%;
+    }
+
+    .right-paragraph-container {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .right-paragraph-container h2 {
+        font-size: 1.5rem;
+    }
+    .contact-form-container {
+        margin-top: 4rem;
+    }
+}
 
 @media (min-width: 576px){
     .container-team{
@@ -808,9 +914,6 @@ nav a.active {
    
 }
 
-
-
-
 @media (max-width: 768px) {
     .history-container {
         padding: 1.5rem;
@@ -826,12 +929,6 @@ nav a.active {
 }
 
 
-
-
-
-
-
-
 /************ Animations ***********/
 @keyframes fadeIn {
     from {
@@ -845,30 +942,30 @@ nav a.active {
     animation: fadeIn 2s ease-in;
 }
 
-/* Define the slide-in fade animation */
+
 @keyframes slideInFade {
     from {
       opacity: 0;
-      transform: translateX(-35%); /* Slide in from the left */
+      transform: translateX(-35%); 
     }
     to {
       opacity: 2;
-      transform: translateX(0); /* End at the original position */
+      transform: translateX(0); 
     }
   }
 
   @keyframes slideDownFade {
     from {
       opacity: 0;
-      transform: translateY(-35%); /* Slide in from the left */
+      transform: translateY(-35%); 
     }
     to {
       opacity: 2;
-      transform: translateY(0); /* End at the original position */
+      transform: translateY(0); 
     }
   }
   
-  /* Apply the animation to an element */
+
 .slide-down-fade{
     animation: slideDownFade 2s ease-in;
 }
@@ -877,16 +974,16 @@ nav a.active {
 }
 @keyframes popUp {
     0% {
-        transform: scale(0.5); /* Start small */
-        opacity: 0; /* Start as invisible */
+        transform: scale(0.5); 
+        opacity: 0; 
     }
     50% {
-        transform: scale(1.1); /* Scale slightly larger than normal */
-        opacity: 1; /* Full opacity */
+        transform: scale(1.1); 
+        opacity: 1;
     }
     100% {
-        transform: scale(1); /* Set to normal size */
-        opacity: 1; /* Full opacity */
+        transform: scale(1); 
+        opacity: 1; 
     }
 }
 
