@@ -28,11 +28,11 @@ body{
 }   
 
 #logo img {
-    width: 10%; /* Adjust size for responsiveness */
+    width: 10%; 
     height: auto;
 }
 
-/* Navbar Styles */
+
 header{
     display: grid;
     grid-template-columns: 80px fr calc(var(--w-image) * var(--calculate));
@@ -72,9 +72,9 @@ nav a.active {
 }
 
 .dropdown {
-    position: relative; /* Position relative for the dropdown container */
+    position: relative; 
     display: inline-block;
-    width: fit-content; /* Ensures dropdown button fits content */
+    width: fit-content; 
 }
 
 .dropbtn {
@@ -82,8 +82,8 @@ nav a.active {
     color: white;
     font-family: "Modak", system-ui, sans-serif;
     font-size: 1.5rem;
-    padding: 0.5rem 1rem;  /* Same padding as the dropdown items */
-    border-radius: 20px; /* Oval shape by default */
+    padding: 0.5rem 1rem;  
+    border-radius: 20px; 
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -91,43 +91,43 @@ nav a.active {
     width: 100%;
 }
 
-/* Hover state: Remove the border-radius to make the button rectangular */
+
 .dropbtn:hover, .dropdown:hover .dropbtn {
     background-color: #D5CEA3;
     color: #1A120B;
     border-radius: 0;
 }
 
-/* Dropdown Content (hidden by default) */
+
 .dropdown-content {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positioned relative to the dropdown container */
-    top: 100%; /* Positioned directly below the button */
+    display: none; /
+    position: absolute; 
+    top: 100%; 
     left: 0;
     background-color: #D5CEA3;
-    min-width: 100%; /* Match the button width */
+    min-width: 100%; 
     z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
-    overflow: hidden; /* Prevent items from overflowing */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
     padding: 0;
 }
 
-/* Dropdown items */
+
 .dropdown-content a {
     color: white;
-    padding: 0.5rem 1rem;  /* Same padding as the button */
+    padding: 0.5rem 1rem;  
     text-decoration: none;
     display: block;
     font-family: "Modak", system-ui, sans-serif;
-    font-size: 1.5rem;  /* Same font size as the button */
+    font-size: 1.5rem;  
     letter-spacing: 0.1rem;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease; 
 }
 
-/* Hover effect for dropdown items */
+
 .dropdown-content a:hover {
     background-color: #FFFFFF;
-    border-radius: 0; /* Remove oval corners on hover */
+    border-radius: 0; 
 }
 
 .dropdown-content .color-brown:hover {
@@ -139,7 +139,7 @@ nav a.active {
 .dropdown-content .color-Beige:hover {
     color: #A77C82;
 }
-/* Show dropdown on hover */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -325,7 +325,7 @@ nav a.active {
 .arrows{
     z-index: 10;
 }
-/* prev */
+
 .prev .list .item .image img,
 .prev .list .item .image figcaption{
     animation: effectPrev 0.5s ease-in-out 1 forwards;
