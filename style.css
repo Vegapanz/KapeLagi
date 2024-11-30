@@ -881,7 +881,7 @@ nav a.active {
         z-index: 0;
     }
     .left-image-container {
-        position: sticky;
+        position: static;
         margin: 1rem auto;
         transform: none;
         text-align: center;
