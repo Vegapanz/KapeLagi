@@ -9,10 +9,9 @@
     <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
     <title>KapeLagi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Modak&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Moulpali&family=Mouse+Memoirs&family=Nerko+One&family=Nosifer&family=Odibee+Sans&family=Oswald:wght@200..700&family=Pathway+Gothic+One&family=Piedra&family=Staatliches&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bowlby+One&family=Climate+Crisis&family=Dela+Gothic+One&family=Gasoek+One&family=Lilita+One&family=Passion+One:wght@400;700;900&family=Rubik+Mono+One&family=Tilt+Warp&display=swap" rel="stylesheet">
 </head>    
 <body>
@@ -22,8 +21,15 @@
             <img src="Images/logo.png" alt="Logo">
         </a>
     </div>
+    <!---- Hamburger Menu Button ------------------------------------------------------------------------------------------>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
     <!---- Navbar ------------------------------------------------------------------------------------------>
-    <nav id="navbar">   
+    <nav id="navbar" class="navbar">   
         <a href="index.html" class="active">HOME</a>
         <!-- PRODUCT Dropdown Menu -->
         <div class="dropdown">
@@ -51,5 +57,6 @@
             We are passionate about crafting exceptional coffee and bringing people together to enjoy warm, comforting flavors. Experience the richness of our blends, inspired by some of the world’s most vibrant coffee cultures.
         </p>
     </div>
+    <script src="js/hamburger.js"></script>
 </body>
 </html>
