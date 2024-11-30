@@ -9,12 +9,11 @@
     <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
     <title>KapeLagi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Modak&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Moulpali&family=Mouse+Memoirs&family=Nerko+One&family=Nosifer&family=Odibee+Sans&family=Oswald:wght@200..700&family=Pathway+Gothic+One&family=Piedra&family=Staatliches&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bowlby+One&family=Climate+Crisis&family=Dela+Gothic+One&family=Gasoek+One&family=Lilita+One&family=Passion+One:wght@400;700;900&family=Rubik+Mono+One&family=Tilt+Warp&display=swap" rel="stylesheet">
-</head>    
+</head>        
 <body>
     <!---- logo ------------------------------------------------------------------------------------------>
     <div id="logo">
@@ -22,6 +21,12 @@
             <img src="Images/logo.png" alt="Logo">
         </a>
     </div>
+        <!---- Hamburger Menu Button ------------------------------------------------------------------------------------------>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     <!---- Navbar ------------------------------------------------------------------------------------------>
     <nav id="navbar"> 
         <a href="index.html">HOME</a>
@@ -41,15 +46,15 @@
         <div class="transparent-picture"> 
             <img src="Images/COffee Splash 4.png" alt="splash_background" width="1000px" height="1000px">
         </div>
-        <!-------------------- Contact Form Container ---------------------->
+        <!-- Contact Form Container -->
         <div class="contact-form-container">
-
+            <!-- Heading -->
             <h2 class="contact-heading slide-down-fade">Contact</h2>
             
             <!-- Form -->
             <div class="contact-form-wrapper">
                 <div class="form-column">
-
+                    <!-- Left Column: Email and Message -->
                     <form class="contact-form fade-in" action="https://api.web3forms.com/submit" method="POST">
                         <div class="form-group" >
                             <input type="hidden" name="access_key" value="31e33a22-d18f-4773-afd6-7ac2a6c36cf4">
@@ -66,7 +71,7 @@
                 </div>
                 
                 <div class="icons-column">
-
+                    <!-- Right Column: Social Media Icons -->
                     <div class="social-icons fade-in">
                         <a href="https://www.facebook.com/profile.php?id=61564975820078" target="_blank">
                             <img src="Images/facebook black.png" alt="Facebook" class="icon">
@@ -91,5 +96,6 @@
     </body>
     
     <script src="js/email.js"></script>
+    <script src="js/hamburger.js"></script>
 </body>
 </html>
