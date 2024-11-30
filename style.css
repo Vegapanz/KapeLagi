@@ -19,7 +19,7 @@ body {
     margin: 0;
     position: relative;
     overflow-x: hidden;
-    transition: background-color 0.5s ease; 
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
   }
   .transparent-picture img{
     width: 50%;
@@ -30,21 +30,21 @@ body {
     justify-content: center;
     align-items: center;
   }
-
+/* Logo Design */
 #logo {
     position: fixed;
     top: 3.5rem;
-    left: 5%;
-    z-index: 101;
+    left: 0;
+    z-index: 1001;
+    top: 2%;
 }   
 
 #logo img {
-    width: 25%; 
+    width: 20%; /* Adjust size for responsiveness */
     height: auto;
-    z-index: 1000;
 }
 
-/**************** Navbar ***************/
+/* Navbar Styles */
 nav {
     position: fixed;
     top: 0;
@@ -76,53 +76,54 @@ nav a.active {
     color: #1A120B;
 }
 
+/* Left Image */
 
-
+  /* Existing styles for the container */
   .left-image-container {
     position: fixed;
-    top: 30%; 
-    left: 5%; 
+    top: 30%; /* Center vertically */
+    left: 5%; /* Adjust for responsiveness */
     transform: translateY(-50%) rotate(14deg);
-    animation: fadeIn 1.5s ease-out; 
-    z-index: 1; 
+    animation: fadeIn 1.5s ease-out; /* Add the fade-in animation */
+    z-index: 1; /* Ensure the left image is on top */
   }
   
-
+  /* Existing styles for the image */
   .left-image-container img {
       width: 100%;
-      max-width: 900px; 
+      max-width: 900px; /* Limit size for larger screens */
       height: auto;
   }
+/* Add Pop-up Animation for the Coffee Splash */
 
-
-
+/* Apply pop-up animation to .coffee-splash with 2-second delay */
 .coffee-splash {
     position: fixed;
-    top: 25%; 
-    left: -3%; 
-    z-index: 0; 
-    animation: popUp 0.5s ease-out ;
+    top: 25%; /* Adjust this value to align with the left image */
+    left: -3%; /* Adjust to align with the left image */
+    z-index: 0; /* Ensure it is behind the left image */
+    animation: popUp 0.5s ease-out ; /* Apply the pop-up animation with 2-second delay */
 }
 
 .coffee-splash img {
     width: 200%;
-    max-width: 1000px; 
+    max-width: 1000px; /* Control the splash size */
     height: auto;
     object-fit: contain;
-    opacity: 0;
-    animation: popUp 0.5s ease-out 2s forwards; 
+    opacity: 0; /* Hide image initially */
+    animation: popUp 0.5s ease-out 2s forwards; /* Same pop-up animation */
 }
 
 
 
 
-
+/* Right Paragraph */
 .right-paragraph-container {
     position: fixed;
-    right: 10%; 
+    right: 10%; /* Adjust for responsiveness */
     top: 50%;
     transform: translateY(-50%);
-    width: 35%; 
+    width: 35%; /* Adjust width for readability */
     color: #FFFFFF;
     font-family: "Lekton", monospace;
     font-size: 1.2rem;
@@ -147,11 +148,11 @@ nav a.active {
 
 /*********** Product CSS *********/
 
-
+/* Dropdown Styles */
 .dropdown {
-    position: relative; 
+    position: relative; /* Position relative for the dropdown container */
     display: inline-block;
-    width: fit-content; 
+    width: fit-content; /* Ensures dropdown button fits content */
 }
 
 .dropbtn {
@@ -159,8 +160,8 @@ nav a.active {
     color: white;
     font-family: "Modak", system-ui, sans-serif;
     font-size: 1.5rem;
-    padding: 0.5rem 1rem;  
-    border-radius: 20px; 
+    padding: 0.5rem 1rem;  /* Same padding as the dropdown items */
+    border-radius: 20px; /* Oval shape by default */
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -168,43 +169,43 @@ nav a.active {
     width: 100%;
 }
 
-
+/* Hover state: Remove the border-radius to make the button rectangular */
 .dropbtn:hover, .dropdown:hover .dropbtn {
     background-color: #D5CEA3;
     color: #1A120B;
     border-radius: 0;
 }
 
-
+/* Dropdown Content (hidden by default) */
 .dropdown-content {
-    display: none;
-    position: absolute; 
-    top: 100%; 
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the dropdown container */
+    top: 100%; /* Positioned directly below the button */
     left: 0;
     background-color: #D5CEA3;
-    min-width: 100%; 
+    min-width: 100%; /* Match the button width */
     z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
-    overflow: hidden; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+    overflow: hidden; /* Prevent items from overflowing */
     padding: 0;
 }
 
 /* Dropdown items */
 .dropdown-content a {
     color: white;
-    padding: 0.5rem 1rem;  
+    padding: 0.5rem 1rem;  /* Same padding as the button */
     text-decoration: none;
     display: block;
     font-family: "Modak", system-ui, sans-serif;
-    font-size: 1.5rem;  
+    font-size: 1.5rem;  /* Same font size as the button */
     letter-spacing: 0.1rem;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
-
+/* Hover effect for dropdown items */
 .dropdown-content a:hover {
     background-color: #FFFFFF;
-    border-radius: 0; 
+    border-radius: 0; /* Remove oval corners on hover */
 }
 
 .dropdown-content .color-brown:hover {
@@ -216,7 +217,7 @@ nav a.active {
 .dropdown-content .color-Beige:hover {
     color: #A77C82;
 }
-
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -227,12 +228,12 @@ nav a.active {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
-    background-color: rgba(229, 229, 203, 0.8); 
+    transform: translate(-50%, -50%); /* Center the container */
+    background-color: rgba(229, 229, 203, 0.8); /* Semi-transparent background */
     border-radius: 100px;
     padding: 4rem;
-    width: 100%; 
-    max-width: 1200px; 
+    width: 100%; /* Adjust width */
+    max-width: 1200px; /* Max width */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -240,7 +241,7 @@ nav a.active {
     justify-content: center;    
 }
 
-
+/* Heading Styles */
 .contact-heading {
     font-size: 3.5rem;
     font-family: "Modak", sans-serif;
@@ -252,17 +253,17 @@ nav a.active {
     font-weight: 400;
 }
 
-
+/* Form Wrapper */
 .contact-form-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-
+/* Left Column for Form */
 .form-column {
-    flex: 1; 
-    padding-right: 1.5rem;
+    flex: 1; /* Take up 50% of the container */
+    padding-right: 1.5rem; /* Spacing between the columns */
 }
 
 .contact-form {
@@ -301,15 +302,15 @@ nav a.active {
     font-family: "Lekton", monospace;
     line-height: 1.5;
     width: 100%;
-    height: 200px;
-    padding: 1rem;  
-    font-size: 1rem;
+    height: 200px; /* Increase the height to make it larger */
+    padding: 1rem;  /* Add more padding for better spacing */
+    font-size: 1rem; /* Larger font size for better readability */
     border: 2px solid #1A120B;
     border-radius: 10px;
     background-color: #D5CEA3;
     color: #000000;
     margin-top: 0.3rem;
-    resize: vertical; 
+    resize: vertical; /* Allow the user to resize the textarea vertically */
 }
 .email-error{
     transition: top 0.5s;
@@ -334,9 +335,9 @@ nav a.active {
     color: #1A120B;
 }
 
-
+/* Right Column for Icons */
 .icons-column {
-    flex: 0.7; 
+    flex: 0.7; /* Take up 50% of the container */
     padding-left: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -393,7 +394,7 @@ nav a.active {
     border-radius: 15px;
     padding: 2rem;
     max-width: 1500px;
-    width: 100%; 
+    width: 100%; /* Adjust for responsiveness */
     color: #FFFFFF;
 }
 
@@ -401,7 +402,7 @@ nav a.active {
     border-radius: 15px;
     padding: 2rem;
     max-width: 1500px;
-    width: 100%; 
+    width: 100%; /* Adjust for responsiveness */
     color: #FFFFFF;
 }
 
@@ -587,8 +588,8 @@ nav a.active {
 }
 .team-social a {
     display: inline-block;
-    width: 40px; 
-    height: 40px; 
+    width: 40px;  /* Adjust the size of the icons */
+    height: 40px; /* Ensure the icons maintain their aspect ratio */
     margin-right: 5px;
     padding: 11px 0 10px 0;
     text-align: center;
@@ -597,12 +598,12 @@ nav a.active {
 
 .team-social img {
     width: 50%;
-    height: auto; 
+    height: auto; /* Make sure the images maintain their aspect ratio */
     border-radius: 10px;
 }
 
 .team-social a:hover img {
-    filter: brightness(0.8); 
+    filter: brightness(0.8); /* Optional: Make the image slightly darker on hover */
 }
 .team .team-social a.social-tw{
     background: #00acee;
@@ -728,7 +729,7 @@ nav a.active {
     opacity: 0.7;
 }
 
-
+/* Dropdown sub-menu for Products in footer */
 .dropdown .sub-menu {
     display: none;
     margin-left: 1rem;
@@ -743,6 +744,76 @@ nav a.active {
     margin-bottom: 0.25rem;
 }
 
+
+
+
+
+
+
+
+
+
+/************ Animations ***********/
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+/* Define the slide-in fade animation */
+@keyframes slideInFade {
+    from {
+      opacity: 0;
+      transform: translateX(-35%); /* Slide in from the left */
+    }
+    to {
+      opacity: 2;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  @keyframes slideDownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-35%); /* Slide in from the left */
+    }
+    to {
+      opacity: 2;
+      transform: translateY(0); /* End at the original position */
+    }
+  }
+  
+  /* Apply the animation to an element */
+.slide-down-fade{
+    animation: slideDownFade 2s ease-in;
+}
+.slide-in-fade {
+    animation: slideInFade 2s ease-in;
+}
+@keyframes popUp {
+    0% {
+        transform: scale(0.5); /* Start small */
+        opacity: 0; /* Start as invisible */
+    }
+    50% {
+        transform: scale(1.1); /* Scale slightly larger than normal */
+        opacity: 1; /* Full opacity */
+    }
+    100% {
+        transform: scale(1); /* Set to normal size */
+        opacity: 1; /* Full opacity */
+    }
+}
+
+.pop-up{
+    animation: popUp 1s ease-out ;
+}
 
 /************** Media Queries for Responsiveness ***************/
 @media (max-width: 1024px) {
@@ -768,9 +839,9 @@ nav a.active {
     }
 
     .coffee-splash {
-        left: -13%; 
-        z-index: 0; 
-        animation: popUp 0.5s ease-out ; 
+        left: -13%; /* Adjust to align with the left image */
+        z-index: 0; /* Ensure it is behind the left image */
+        animation: popUp 0.5s ease-out ; /* Apply the pop-up animation with 2-second delay */
     }
     
     .coffee-splash img {
@@ -796,15 +867,12 @@ nav a.active {
         display: none;
     }
 
-    #logo{
-        display: none   ;
-    }
     .coffee-splash {
         position: fixed;
-        top: 20%; 
-        left: -5%; 
-        z-index: 0; 
-        animation: popUp 0.5s ease-out ; 
+        top: 20%; /* Adjust this value to align with the left image */
+        left: -5%; /* Adjust to align with the left image */
+        z-index: 0; /* Ensure it is behind the left image */
+        animation: popUp 0.5s ease-out ; /* Apply the pop-up animation with 2-second delay */
     }
     
     .coffee-splash img {
@@ -813,7 +881,7 @@ nav a.active {
         z-index: 0;
     }
     .left-image-container {
-        position: static;
+        position: sticky;
         margin: 1rem auto;
         transform: none;
         text-align: center;
@@ -838,7 +906,7 @@ nav a.active {
         text-align: center;
     }
     .contact-form-container {
-        width: 90%; 
+        width: 90%; /* Adjust width on smaller screens */
         padding: 1rem;
         margin-top: 4rem;
     }
@@ -914,6 +982,10 @@ nav a.active {
    
 }
 
+
+
+
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .history-container {
         padding: 1.5rem;
@@ -928,66 +1000,115 @@ nav a.active {
     }
 }
 
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
 
-/************ Animations ***********/
-@keyframes fadeIn {
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    #navbar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1A120B;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        animation: slideInMenu 0.5s ease-out;
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+
+    #navbar a {
+        font-size: 2rem;
+        margin: 1rem 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInLinks 0.5s forwards;
+    }
+
+    #navbar a:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    #navbar a:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    #navbar a:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+    #logo {
+        position: fixed;
+        top: 3.5rem;
+        left: 0;
+        z-index: 12;
+        top: 2%;
+    }   
+    
+    #logo img {
+        width: 10%; /* Adjust size for responsiveness */
+        height: auto;
+    }
+}
+
+@keyframes slideInMenu {
     from {
-      opacity: 0;
+        opacity: 0;
+        transform: translateX(100%);
     }
     to {
-      opacity: 1;
-    }
-}
-.fade-in {
-    animation: fadeIn 2s ease-in;
-}
-
-
-@keyframes slideInFade {
-    from {
-      opacity: 0;
-      transform: translateX(-35%); 
-    }
-    to {
-      opacity: 2;
-      transform: translateX(0); 
-    }
-  }
-
-  @keyframes slideDownFade {
-    from {
-      opacity: 0;
-      transform: translateY(-35%); 
-    }
-    to {
-      opacity: 2;
-      transform: translateY(0); 
-    }
-  }
-  
-
-.slide-down-fade{
-    animation: slideDownFade 2s ease-in;
-}
-.slide-in-fade {
-    animation: slideInFade 2s ease-in;
-}
-@keyframes popUp {
-    0% {
-        transform: scale(0.5); 
-        opacity: 0; 
-    }
-    50% {
-        transform: scale(1.1); 
         opacity: 1;
-    }
-    100% {
-        transform: scale(1); 
-        opacity: 1; 
+        transform: translateX(0);
     }
 }
 
-.pop-up{
-    animation: popUp 1s ease-out ;
+@keyframes fadeInLinks {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+@media (min-width: 320px) {} 
+@media (max-width: 767px) {} 
+@media (min-width: 768px) {}  
+@media (min-width: 768px) and (max-width: 1024px) {} 
+@media (min-width: 1025px){} 
