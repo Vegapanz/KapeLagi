@@ -19,7 +19,7 @@ body {
     margin: 0;
     position: relative;
     overflow-x: hidden;
-    transition: background-color 0.5s ease; 
+    transition: background-color 0.5s ease;
   }
   .transparent-picture img{
     width: 50%;
@@ -77,8 +77,6 @@ nav a.active {
 }
 
 
-
-
   .left-image-container {
     position: fixed;
     top: 30%; 
@@ -95,26 +93,22 @@ nav a.active {
       height: auto;
   }
 
-
-
 .coffee-splash {
     position: fixed;
-    top: 25%; 
+    top: 25%;
     left: -3%; 
-    z-index: 0; 
+    z-index: 0;
     animation: popUp 0.5s ease-out ; 
 }
 
 .coffee-splash img {
     width: 200%;
-    max-width: 1000px;
+    max-width: 1000px; 
     height: auto;
     object-fit: contain;
     opacity: 0; 
     animation: popUp 0.5s ease-out 2s forwards; 
 }
-
-
 
 
 
@@ -150,7 +144,7 @@ nav a.active {
 
 
 .dropdown {
-    position: relative; /
+    position: relative; 
     display: inline-block;
     width: fit-content; 
 }
@@ -161,7 +155,7 @@ nav a.active {
     font-family: "Modak", system-ui, sans-serif;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;  
-    border-radius: 20px; 
+    border-radius: 20px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -180,10 +174,10 @@ nav a.active {
 .dropdown-content {
     display: none; 
     position: absolute; 
-    top: 100%;
+    top: 100%; 
     left: 0;
     background-color: #D5CEA3;
-    min-width: 100%;
+    min-width: 100%; 
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
     overflow: hidden; 
@@ -197,7 +191,7 @@ nav a.active {
     text-decoration: none;
     display: block;
     font-family: "Modak", system-ui, sans-serif;
-    font-size: 1.5rem;  
+    font-size: 1.5rem; 
     letter-spacing: 0.1rem;
     transition: all 0.3s ease; 
 }
@@ -205,7 +199,7 @@ nav a.active {
 
 .dropdown-content a:hover {
     background-color: #FFFFFF;
-    border-radius: 0;
+    border-radius: 0; 
 }
 
 .dropdown-content .color-brown:hover {
@@ -233,7 +227,7 @@ nav a.active {
     border-radius: 100px;
     padding: 4rem;
     width: 100%; 
-    max-width: 1200px; 
+    max-width: 1200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -303,7 +297,7 @@ nav a.active {
     line-height: 1.5;
     width: 100%;
     height: 200px; 
-    padding: 1rem;  
+    padding: 1rem; 
     font-size: 1rem; 
     border: 2px solid #1A120B;
     border-radius: 10px;
@@ -745,9 +739,6 @@ nav a.active {
 }
 
 
-
-
-
 /************ Animations ***********/
 @keyframes fadeIn {
     from {
@@ -875,7 +866,7 @@ nav a.active {
         z-index: 0;
     }
     .left-image-container {
-        position: static;
+        position: sticky;
         margin: 1rem auto;
         transform: none;
         text-align: center;
@@ -954,6 +945,30 @@ nav a.active {
     }
 }
 @media (min-width: 768px){
+    .container-team{
+        max-width: 720px;
+    }
+    .column-team{
+        max-width: 33.333333%;
+    }
+}
+@media (min-width: 992px){
+    .container-team{
+        max-width: 960px;
+    }
+    .column-team{
+        max-width: 25%;
+    }
+}
+@media (min-width: 1200px){
+    .container-team{
+        max-width: 1140px;
+    }
+   
+}
+
+
+@media (max-width: 768px) {
     .history-container {
         padding: 1.5rem;
     }
@@ -965,13 +980,41 @@ nav a.active {
     .history-container p {
         font-size: 1rem;
     }
-    .container-team{
-        max-width: 720px;
-    }
-    .column-team{
-        max-width: 33.333333%;
-    }
-     .hamburger-menu {
+}
+
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
         display: flex;
     }
 
@@ -1027,52 +1070,6 @@ nav a.active {
         height: auto;
     }
 }
-@media (min-width: 992px){
-    .container-team{
-        max-width: 960px;
-    }
-    .column-team{
-        max-width: 25%;
-    }
-}
-@media (min-width: 1200px){
-    .container-team{
-        max-width: 1140px;
-    }
-   
-}
-
-
-
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
-    transition: 0.4s;
-}
-
-.hamburger-menu.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
 
 @keyframes slideInMenu {
     from {
@@ -1092,7 +1089,63 @@ nav a.active {
     }
 }
 
-@media (min-width: 320px) {} 
+@media (max-width: 320px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    #navbar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1A120B;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        animation: slideInMenu 0.5s ease-out;
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+
+    #navbar a {
+        font-size: 2rem;
+        margin: 1rem 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInLinks 0.5s forwards;
+    }
+
+    #navbar a:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    #navbar a:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    #navbar a:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+    #logo {
+        position: fixed;
+        top: 3.5rem;
+        left: 0;
+        z-index: 12;
+        top: 2%;
+    }   
+    
+    #logo img {
+        width: 10%; 
+        height: auto;
+    }
+} 
 @media (max-width: 767px) {} 
 @media (min-width: 768px) {}  
 @media (min-width: 768px) and (max-width: 1024px) {} 
