@@ -57,12 +57,12 @@ nav a {
     color: white;
     text-decoration: none;
     font-family: "Modak", system-ui, sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
     font-style: normal;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     margin: 0 0.5rem;
-    border-radius: 20px;
+    border-radius: 30px;
     transition: all 0.3s ease;
     letter-spacing: 0.1rem;
 }
@@ -83,9 +83,9 @@ nav a.active {
     background-color: transparent;
     color: white;
     font-family: "Modak", system-ui, sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 0.5rem 1rem;  
-    border-radius: 20px;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -117,11 +117,11 @@ nav a.active {
 
 .dropdown-content a {
     color: white;
-    padding: 0.5rem 1rem;  
+    padding: 0.5rem 2rem;  
     text-decoration: none;
     display: block;
     font-family: "Modak", system-ui, sans-serif;
-    font-size: 1.5rem;  
+    font-size: 2rem;  
     letter-spacing: 0.1rem;
     transition: all 0.3s ease; 
 }
